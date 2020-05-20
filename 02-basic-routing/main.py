@@ -12,13 +12,13 @@ def hi_everybody():
 def about_me():
     return "i am very smart"
 
-@app.route('/double/<number>')
+@app.route('/double/<int:number>')
 def double(number):
-    return str(int(number)*2)
+    return str(number*2)
 
-@app.route('/add/<n1>/<n2>')
+@app.route('/add/<int:n1>/<int:n2>')
 def add(n1,n2):
-    return str(int(n1) + int(n2))
+    return str(n1+n2)
 
 
 

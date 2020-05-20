@@ -3,10 +3,13 @@ import os
 
 app = Flask(__name__)
 
-#your code here
 @app.route('/')
-def hello_world():
-    return "hello world"
+def index():
+    return render_template('index.template.html')
+
+@app.route('/products')
+def products():
+    return render_template('products.template.html')
 
 # "magic code" -- boilerplate
 if __name__ == '__main__':
